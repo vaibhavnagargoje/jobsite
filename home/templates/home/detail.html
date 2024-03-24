@@ -1,0 +1,109 @@
+{% comment %} {% extends "home/base.html" %} {% endcomment %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detal page </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+<head>
+
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .job-details {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .job-details h1 {
+            text-align: center;
+        }
+        .company-logo {
+            max-width: 100px;
+            display: block;
+            margin: 0 auto 20px;
+        }
+        .apply-btn {
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            
+            bottom: 0;
+            left: 0;
+            z-index: 9999;
+        }
+       
+        
+    </style>
+</head>
+<body>
+    <header>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+                <div class="container">
+                    <a class="navbar-brand" href="#">Job Portal</a>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Home</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="admin/">Admin Login</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    </header>
+
+    <div class="job-details">
+        
+        <h1> {{post.job_title}} </h1>
+        <br>
+        <br>
+        <br>
+        <p><strong>Company Name:</strong> {{ post.company_name}} </p>
+        <p><strong>Year of Passing Hiring Process:</strong> {{ post.year_passing }} </p>
+        <p><strong>Contact Details :</strong> {{ post.contact_number}} </p>
+        <p><strong>Job Description:</strong> {{ post.job_discription}} </p>
+        <p><strong>Eligibility:</strong> {{ post.eligibility}} <p>
+        <p><strong>Qualification:</strong> {{ post.qualification}} <p>
+        <p><strong>Experience:</strong> {{ post.experience}} </p>
+        <p><strong>Start Date:</strong> {{ post.start_date}} </p>
+        <p><strong>End Date:</strong> {{ post.end_date}} </p>
+        <p><strong>Location:</strong> {{ post.location}} </p>
+        <p><strong> Offical Site: </strong><a href="{{post.offical_site}}">Click here </a></p>
+        <a href="{{ post.apply_link }}" class="btn btn-primary apply-btn"> Apply Now </a>
+        </div>
+
+
+
+            
+        <footer class="footer">
+            
+            <div class="container">
+                <p>&copy; 2024 Job Portal</p>
+            </div>
+        </footer>
+
+            
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+   
+</body>
+</html>
